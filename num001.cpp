@@ -14,7 +14,7 @@ double c(double n, int k)
 {
     double coeff = 1.0;
     for(int i = 0; i < k; ++i){
-        coeff *= (n - i)/(i+1);
+        coeff *= (n - i)/(i + 1);
     }
     return coeff;
 }
@@ -34,7 +34,7 @@ int main()
 
     for(int i = 1; i < n; ++i){
         for(int j = 0; j < n - i; ++j)
-            table[j][i] = table[j+1][i-1] - table[j][i-1];
+            table[j][i] = table[j + 1][i - 1] - table[j][i - 1];
     }
 
     // Uncomment to print difference table
@@ -44,9 +44,9 @@ int main()
         printf("\n");
     }*/
 
-    double h = x[1] - x[0];
+    double h = x[1] - x[0];            // Subinterval length
 
-    double ccp = x0;                 // Subinterval length
+    double ccp = x0;                 
     int index = 0;
     while(x0 - x[index] > 0){
         ccp = x[index];               // Starting point
@@ -58,7 +58,7 @@ int main()
     // Newton's forward difference formula
     double ans = 0;
     for(int i = 0; i < n; ++i){
-        ans += (table[index-1][i]*c(N,i));
+        ans += (table[index - 1][i]*c(N, i));
     }
 
     printf("\n%.4lf", ans);
