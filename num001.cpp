@@ -8,7 +8,6 @@ using namespace std;
 
 double x[10];
 double y[10];
-
 double table[10][10] = {{0}};
 
 double c(double n, int k)
