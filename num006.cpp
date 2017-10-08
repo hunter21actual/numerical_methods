@@ -46,7 +46,7 @@ bool e(double I1, double I2)
 I = I[k] - ((I[k] - I[k-1])/3) */
 double R(double X, double Y)
 {
-    return Y + ((Y - X)/3);
+    return Y + ((Y - X)/3.0);
 }
 
 int main()
