@@ -8,7 +8,7 @@ using namespace std;
 
 double y[11];
 
-// Differential equation
+// Differential equation definition
 double f(double x, double y)
 {
     return y - x;
